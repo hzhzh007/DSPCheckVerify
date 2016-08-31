@@ -8,8 +8,10 @@ import (
 )
 
 const (
-	CheckPcFront = "pc_front"
-	CheckAppFont = "app_front"
+	CheckPcFront  = "pc_front"
+	CheckAppFont  = "app_front"
+	CheckPcPause  = "pc_pause"
+	CheckAppPause = "app_pause"
 )
 
 var (
@@ -19,7 +21,7 @@ var (
 )
 
 func init() {
-	flag.StringVar(&checkType, "t", "pc_front", "检查类型, pc_front: pc 前贴片, pc_pause: pc 暂停")
+	flag.StringVar(&checkType, "t", "pc_front", "检查类型, pc_front: pc 前贴片, pc_pause: pc 暂停, app_pause app 暂停, app_front app贴片")
 	flag.StringVar(&apiUrl, "a", "http://127.0.0.1/mgtv/bid", "dsp 使用的通信url")
 	flag.BoolVar(&verbose, "v", false, "打印详细")
 
@@ -39,6 +41,10 @@ func main() {
 		data = PC_FRONT
 	case CheckAppFont:
 		data = APP_FRONT
+	case CheckPcPause:
+		data = PC_PAUSE
+	case CheckAppPause:
+		data = APP_PAUSE
 	}
 	result, err := Request(data)
 	if err != nil {
