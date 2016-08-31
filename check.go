@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	proto "github.com/hzhzh007/mgtvPmpProto"
+	proto "github.com/tiankui626/mgtvPmpProto"
 	"io/ioutil"
 	"log"
 	"net/http"
