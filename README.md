@@ -25,15 +25,23 @@ Usage of ./bin/check_mac:
 ## 尺寸
 
 pc贴片 848*480
+
 app贴片 512*288
+
 时长 15s
+
 暂停 480*270
 
 ## 素材
 
 pc贴片
+
 http://mp4.res.hunantv.com/pmp/27/1467959430737.flv
+
 app贴片
+
 http://res.hunantv.com//mediafiles/wiad_creative/213/1460434626.mp4
+
 暂停
+
 http://res.hunantv.com/mediafiles/wiad_creative/49/1460450426.jpg
