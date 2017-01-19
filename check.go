@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	proto "github.com/hzhzh007/mgtvPmpProto"
+	proto "github.com/tiankui626/mgtvPmpProto"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -70,8 +70,8 @@ func check(data string, resp *proto.Response) error {
 	if ads.AdUrl == "" {
 		return errors.New("ads AdUrl is nil ")
 	}
-	if !strings.HasPrefix(ads.AdUrl, "http://mp4.res.hunantv.com/") {
-		return errors.New("ad url not start with http://mp4.res.hunantv/")
+	if !strings.Contains(ads.AdUrl, "res.hunantv.com") {
+		return errors.New("ad url not res.hunantv.com url")
 	}
 	if ads.ClickThroughUrl == "" {
 		return errors.New("has no click url")
